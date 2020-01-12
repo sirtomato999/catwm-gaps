@@ -56,5 +56,5 @@ Bugs
 
 Todo
 ----
- * Add multiple view ("desktop")
- * Switch to XCB
+ * fix bug^
+ * add moar features, keep it under 1000 sloc
