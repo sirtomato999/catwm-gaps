@@ -43,10 +43,12 @@ Installation
 ------------
 
 Need Xlib, then:
+```
     $ vim config.h
     $ make
     # make install
     $ make clean
+```
 
 Bugs
 ----
