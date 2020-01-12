@@ -1,4 +1,4 @@
-CATWM
+CATWM(-gaps!)
 =====
 
      /\___/\
@@ -16,7 +16,7 @@ I will try to stay under 1000 SLOC.
 
 Status
 ------
- 
+ * 01.10.20 -> v0.3.1 sirtomato added gaps
  * 05.07.19 -> v0.3. Multiple desktops and correct some bugs
  * 30.06.10 -> v0.2. Back again \o/
  * 15.03.10 -> v0.2. The wm is functional -> I only use this wm!
@@ -50,12 +50,9 @@ Need Xlib, then:
 
 Bugs
 ----
- * No bugs for the moment ;) (I mean, no importants bugs ;)
+ * if your gap amount is not divisible the amount of windows you have on the stack, the bottom window will extrude a bit off the bottom
 
 Todo
 ----
  * Add multiple view ("desktop")
  * Switch to XCB
-
-If you have some particular request, just send me an e-mail, and I will see for it!
-
