@@ -29,6 +29,7 @@
  *
  */
 
+#include <X11/Xcursor/Xcursor.h>
 #include <X11/Xlib.h>
 #include <X11/keysym.h>
 #include <X11/XF86keysym.h>
@@ -204,7 +205,6 @@ void client_to_desktop(const Arg arg) {
     // Remove client from current desktop
     select_desktop(tmp2);
     remove_window(current->win);
-
     tile();
     update_current();
 }
@@ -579,6 +579,9 @@ void spawn(const Arg arg) {
 }
 
 void start() {
+    Cursor cursor = XCreateFontCursor(dis, 68);
+    XDefineCursor(dis, root, cursor);
+
     XEvent ev;
 
     // Main loop, just dispatch events (thx to dwm ;)
@@ -623,7 +626,6 @@ void tile() {
                 XMoveResizeWindow(dis,head->win,GAPS,GAPS,master_size-2-GAPS*2,sh-2-GAPS*2);
 
                 // Stack
-		int tmpsh = sh-GAPS*2;
                 for(c=head->next;c;c=c->next) ++n;
                 for(c=head->next;c;c=c->next) {
 		    XMoveResizeWindow(dis, c->win, master_size, y, sw-master_size-2-GAPS, (sh/n)-2-GAPS-GAPS/n);
