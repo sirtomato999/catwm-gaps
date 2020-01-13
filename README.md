@@ -57,4 +57,5 @@ Bugs
 Todo
 ----
  * fix bug^
+ * put the gaps in the config file
  * add moar features, keep it under 1000 sloc
